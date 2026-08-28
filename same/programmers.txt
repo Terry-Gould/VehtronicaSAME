@@ -1,0 +1,13 @@
+vehtronica_cmsis_dap.name=CMSIS-DAP / Atmel-ICE / DAPLink over OpenOCD
+vehtronica_cmsis_dap.communication=USB
+vehtronica_cmsis_dap.protocol=cmsis-dap
+vehtronica_cmsis_dap.program.protocol=cmsis-dap
+vehtronica_cmsis_dap.program.tool=openocd
+vehtronica_cmsis_dap.program.openocdscript=scripts/openocd/daplink_samd51.cfg
+
+vehtronica_jlink.name=J-Link over OpenOCD
+vehtronica_jlink.communication=USB
+vehtronica_jlink.protocol=jlink
+vehtronica_jlink.program.protocol=jlink
+vehtronica_jlink.program.tool=openocd
+vehtronica_jlink.program.openocdscript=scripts/openocd/jlink_samd51.cfg

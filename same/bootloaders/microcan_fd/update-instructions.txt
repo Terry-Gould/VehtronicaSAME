@@ -1,0 +1,7 @@
+It is possible to update the bootloader using the Arduino cli using the update-bootloader.bin files:
+
+& "C:\Program Files\Arduino IDE\resources\app\lib\backend\resources\arduino-cli.exe" upload `
+  --fqbn VehtronicaSAME:same:vehtronica_microcan_fd `
+  --port COM13 `
+  --input-file "...\update-bootloader-MicroCAN_FD_v1_0_0.bin" `
+  --verbose

@@ -1,0 +1,105 @@
+# Copyright (c) 2014-2015 Arduino LLC.  All right reserved.
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+menu.cache=Cache
+menu.speed=CPU Speed
+menu.opt=Optimize
+menu.maxqspi=Max QSPI
+menu.usbstack=USB Stack
+menu.debug=Debug
+
+# -----------------------------------
+# MicroCAN_FD (SAME51)
+# -----------------------------------
+vehtronica_microcan_fd.name=Vehtronica MicroCAN-FD
+
+# VID/PID for Bootloader and Arduino
+vehtronica_microcan_fd.vid.0=0x04D8
+vehtronica_microcan_fd.pid.0=0xE473
+vehtronica_microcan_fd.vid.1=0x04D8
+vehtronica_microcan_fd.pid.1=0xE472
+
+# Upload
+vehtronica_microcan_fd.upload.tool=bossac18
+vehtronica_microcan_fd.upload.protocol=sam-ba
+vehtronica_microcan_fd.upload.maximum_size=507904
+vehtronica_microcan_fd.upload.offset=0x4000
+vehtronica_microcan_fd.upload.use_1200bps_touch=true
+vehtronica_microcan_fd.upload.wait_for_upload_port=true
+vehtronica_microcan_fd.upload.native_usb=true
+
+# Build
+vehtronica_microcan_fd.build.mcu=cortex-m4
+vehtronica_microcan_fd.build.f_cpu=120000000L
+vehtronica_microcan_fd.build.usb_product="MicroCAN-FD"
+vehtronica_microcan_fd.build.usb_manufacturer="Vehtronica"
+vehtronica_microcan_fd.build.board=MicroCAN_FD
+vehtronica_microcan_fd.build.core=arduino
+# including feather build flags to keep compatibility with sketches and libraries built for Adafruit Feather boards.
+vehtronica_microcan_fd.build.extra_flags=-D__SAME51J19A__ -DADAFRUIT_FEATHER_M4_EXPRESS -DADAFRUIT_FEATHER_M4_CAN -Dvehtronica_microcan_fd -D__SAMD51__ -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 {build.usb_flags}
+vehtronica_microcan_fd.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+vehtronica_microcan_fd.build.openocdscript=scripts/openocd/daplink_samd51.cfg
+vehtronica_microcan_fd.build.variant=MicroCAN-FD
+vehtronica_microcan_fd.build.variant_system_lib=
+vehtronica_microcan_fd.build.vid=0x04D8
+vehtronica_microcan_fd.build.pid=0xE472
+vehtronica_microcan_fd.bootloader.tool=openocd
+vehtronica_microcan_fd.bootloader.file=microcan_fd/bootloader-MicroCAN_FD_v1_0_0.bin
+vehtronica_microcan_fd.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
+
+# Menu: Cache
+vehtronica_microcan_fd.menu.cache.on=Enabled
+vehtronica_microcan_fd.menu.cache.on.build.cache_flags=-DENABLE_CACHE
+vehtronica_microcan_fd.menu.cache.off=Disabled
+vehtronica_microcan_fd.menu.cache.off.build.cache_flags=
+
+# Menu: Speed
+vehtronica_microcan_fd.menu.speed.120=120 MHz (standard)
+vehtronica_microcan_fd.menu.speed.120.build.f_cpu=120000000L
+vehtronica_microcan_fd.menu.speed.150=150 MHz (overclock)
+vehtronica_microcan_fd.menu.speed.150.build.f_cpu=150000000L
+vehtronica_microcan_fd.menu.speed.180=180 MHz (overclock)
+vehtronica_microcan_fd.menu.speed.180.build.f_cpu=180000000L
+vehtronica_microcan_fd.menu.speed.200=200 MHz (overclock)
+vehtronica_microcan_fd.menu.speed.200.build.f_cpu=200000000L
+
+# Menu: Optimization
+vehtronica_microcan_fd.menu.opt.small=Small (-Os) (standard)
+vehtronica_microcan_fd.menu.opt.small.build.flags.optimize=-Os
+vehtronica_microcan_fd.menu.opt.fast=Fast (-O2)
+vehtronica_microcan_fd.menu.opt.fast.build.flags.optimize=-O2
+vehtronica_microcan_fd.menu.opt.faster=Faster (-O3)
+vehtronica_microcan_fd.menu.opt.faster.build.flags.optimize=-O3
+vehtronica_microcan_fd.menu.opt.fastest=Fastest (-Ofast)
+vehtronica_microcan_fd.menu.opt.fastest.build.flags.optimize=-Ofast
+vehtronica_microcan_fd.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+vehtronica_microcan_fd.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+
+# Menu: QSPI Speed
+vehtronica_microcan_fd.menu.maxqspi.50=50 MHz (standard)
+vehtronica_microcan_fd.menu.maxqspi.50.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+vehtronica_microcan_fd.menu.maxqspi.fcpu=CPU Speed / 2
+vehtronica_microcan_fd.menu.maxqspi.fcpu.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
+
+# Menu: USB Stack
+vehtronica_microcan_fd.menu.usbstack.arduino=Arduino
+vehtronica_microcan_fd.menu.usbstack.tinyusb=TinyUSB
+vehtronica_microcan_fd.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB -DARDUINO_ARCH_SAMD
+
+# Menu: Debug
+vehtronica_microcan_fd.menu.debug.off=Off
+vehtronica_microcan_fd.menu.debug.on=On
+vehtronica_microcan_fd.menu.debug.on.build.flags.debug=-g

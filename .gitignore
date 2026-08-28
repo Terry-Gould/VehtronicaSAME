@@ -1,0 +1,21 @@
+# Arduino build output
+build/
+*.elf
+*.hex
+*.bin
+*.uf2
+*.map
+
+# Packaged bootloader artifacts are part of the BSP release.
+!same/bootloaders/**/*.bin
+!same/bootloaders/**/*.hex
+!same/bootloaders/**/*.elf
+!same/bootloaders/**/*.map
+
+# Editor and OS noise
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
