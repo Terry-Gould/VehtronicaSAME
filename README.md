@@ -1,14 +1,14 @@
 # VehtronicaSAME
 
-Arduino board support package for Vehtronica SAME51/SAME54 based boards.
+Arduino board support package for SAME51/SAME54 based boards from the Vehtronica project collection.
 
-The first supported public release target is the Vehtronica MicroCAN-FD, a
-dual-channel CAN/CAN FD development, test, and analysis board based on the
-Microchip SAME51.
+Vehtronica is the project codename used for this collection of CAN bus and vehicle electronics projects. The Arduino board support package and related firmware are open source.
+
+The first supported public release target is MicroCAN-FD, a dual-channel CAN/CAN FD development, test, and analysis board based on the Microchip SAME51.
 
 ## Supported Boards
 
-- Vehtronica MicroCAN-FD
+- MicroCAN-FD
 
 ## Installation
 
@@ -26,9 +26,6 @@ This package is intended to be installed through Arduino IDE Boards Manager.
 5. Search for `Vehtronica`.
 6. Install **Vehtronica SAMD/E Boards**.
 
-The GitHub repository and release assets must be public before Arduino IDE can
-fetch the package index and archives without authentication.
-
 The Boards Manager package installs the board support package and the required
 tooling for Windows, macOS, and Linux. Tool versions are pinned by the package
 index so installs are repeatable across machines.
@@ -41,8 +38,6 @@ Check the following:
 - If Boards Manager was already open, close and reopen it after adding the URL.
 - Use the Boards Manager search term `Vehtronica`, not `MicroCAN`.
 - Make sure the computer has internet access to GitHub release downloads.
-- If testing before public release, remember that Arduino IDE cannot use GitHub
-  authentication for private package indexes or private release assets.
 
 You can also test the package index with Arduino CLI:
 
@@ -127,6 +122,31 @@ libraries:
 
 They are intentionally not bundled into this BSP so users and developers do not
 end up with duplicate installed library copies.
+
+## Manual Installation
+
+Boards Manager installation is recommended.
+
+For manual source installation, download the repository and keep this layout inside your Arduino sketchbook hardware folder:
+
+```text
+<Arduino sketchbook>/hardware/VehtronicaSAME/
+  same/
+  tools/
+```
+
+For example on Windows:
+
+```text
+Documents/Arduino/hardware/VehtronicaSAME/
+  same/
+  tools/
+```
+
+Restart Arduino IDE after copying the files.
+
+Manual installation is mainly intended for development or recovery use. It has only been tested on Windows.
+Boards Manager is the recommended installation method for normal users because it installs the correct tool archives for the current operating system.
 
 ## Attribution
 
