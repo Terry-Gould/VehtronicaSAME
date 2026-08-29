@@ -72,7 +72,7 @@ After publishing the release assets, test a fresh install:
 
 ```powershell
 arduino-cli core update-index --additional-urls https://raw.githubusercontent.com/Terry-Gould/VehtronicaSAME/main/package_vehtronica_same_index.json
-arduino-cli core install VehtronicaSAME:same --additional-urls https://raw.githubusercontent.com/Terry-Gould/VehtronicaSAME/main/package_vehtronica_same_index.json
+arduino-cli core install vehtronica:same --additional-urls https://raw.githubusercontent.com/Terry-Gould/VehtronicaSAME/main/package_vehtronica_same_index.json
 arduino-cli board listall Vehtronica
 ```
 

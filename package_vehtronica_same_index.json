@@ -1,7 +1,7 @@
 {
   "packages": [
     {
-      "name": "VehtronicaSAME",
+      "name": "vehtronica",
       "maintainer": "Terry Gould",
       "websiteURL": "https://github.com/Terry-Gould/VehtronicaSAME",
       "email": "terry.gould.public@gmail.com",
@@ -25,27 +25,27 @@
           ],
           "toolsDependencies": [
             {
-              "packager": "VehtronicaSAME",
+              "packager": "vehtronica",
               "name": "arm-none-eabi-gcc",
               "version": "9-2019q4"
             },
             {
-              "packager": "VehtronicaSAME",
+              "packager": "vehtronica",
               "name": "bossac",
               "version": "1.8.0-48-gb176eee"
             },
             {
-              "packager": "VehtronicaSAME",
+              "packager": "vehtronica",
               "name": "CMSIS",
               "version": "5.4.0"
             },
             {
-              "packager": "VehtronicaSAME",
+              "packager": "vehtronica",
               "name": "CMSIS-Atmel",
               "version": "1.2.2"
             },
             {
-              "packager": "VehtronicaSAME",
+              "packager": "vehtronica",
               "name": "openocd",
               "version": "0.11.0-arduino2"
             }

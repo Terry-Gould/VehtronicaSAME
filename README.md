@@ -50,8 +50,8 @@ If the package appears in search but installation fails, remove any partial
 installation and try again:
 
 ```text
-arduino-cli core uninstall VehtronicaSAME:same
-arduino-cli core install VehtronicaSAME:same --additional-urls https://raw.githubusercontent.com/Terry-Gould/VehtronicaSAME/main/package_vehtronica_same_index.json
+arduino-cli core uninstall vehtronica:same
+arduino-cli core install vehtronica:same --additional-urls https://raw.githubusercontent.com/Terry-Gould/VehtronicaSAME/main/package_vehtronica_same_index.json
 ```
 
 ## Board Selection

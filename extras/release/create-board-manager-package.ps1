@@ -176,7 +176,7 @@ foreach ($toolSpec in $toolSpecs) {
 $packageIndex = [ordered]@{
   packages = @(
     [ordered]@{
-      name = "VehtronicaSAME"
+      name = "vehtronica"
       maintainer = "Terry Gould"
       websiteURL = "https://github.com/$Owner/$Repository"
       email = "terry.gould.public@gmail.com"
@@ -199,11 +199,11 @@ $packageIndex = [ordered]@{
             }
           )
           toolsDependencies = @(
-            [ordered]@{ packager = "VehtronicaSAME"; name = "arm-none-eabi-gcc"; version = "9-2019q4" }
-            [ordered]@{ packager = "VehtronicaSAME"; name = "bossac"; version = "1.8.0-48-gb176eee" }
-            [ordered]@{ packager = "VehtronicaSAME"; name = "CMSIS"; version = "5.4.0" }
-            [ordered]@{ packager = "VehtronicaSAME"; name = "CMSIS-Atmel"; version = "1.2.2" }
-            [ordered]@{ packager = "VehtronicaSAME"; name = "openocd"; version = "0.11.0-arduino2" }
+            [ordered]@{ packager = "vehtronica"; name = "arm-none-eabi-gcc"; version = "9-2019q4" }
+            [ordered]@{ packager = "vehtronica"; name = "bossac"; version = "1.8.0-48-gb176eee" }
+            [ordered]@{ packager = "vehtronica"; name = "CMSIS"; version = "5.4.0" }
+            [ordered]@{ packager = "vehtronica"; name = "CMSIS-Atmel"; version = "1.2.2" }
+            [ordered]@{ packager = "vehtronica"; name = "openocd"; version = "0.11.0-arduino2" }
           )
         }
       )
