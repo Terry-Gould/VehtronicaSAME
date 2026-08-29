@@ -1,5 +1,6 @@
 param(
   [string]$Version = "1.0.0",
+  [string]$ToolAssetVersion = $Version,
   [string]$Owner = "Terry-Gould",
   [string]$Repository = "VehtronicaSAME",
   [switch]$SkipToolDownloads
@@ -12,6 +13,7 @@ $dist = Join-Path $repoRoot "dist"
 $toolArchiveDist = Join-Path $dist "tool-archives"
 $indexPath = Join-Path $repoRoot "package_vehtronica_same_index.json"
 $releaseBaseUrl = "https://github.com/$Owner/$Repository/releases/download/$Version"
+$toolReleaseBaseUrl = "https://github.com/$Owner/$Repository/releases/download/$ToolAssetVersion"
 
 $toolSpecs = @(
   [ordered]@{ SourcePackager = "adafruit"; Name = "arm-none-eabi-gcc"; Version = "9-2019q4" }
@@ -108,7 +110,7 @@ function Convert-ToolToVehtronica {
   foreach ($system in $SourceTool.systems) {
     $systems += [ordered]@{
       host = $system.host
-      url = "$releaseBaseUrl/$($system.archiveFileName)"
+      url = "$toolReleaseBaseUrl/$($system.archiveFileName)"
       archiveFileName = $system.archiveFileName
       checksum = $system.checksum
       size = "$($system.size)"
@@ -220,5 +222,10 @@ Write-Output "Created $indexPath"
 if (!$SkipToolDownloads) {
   Write-Output "Prepared mirrored tool archives in $toolArchiveDist"
 }
-Write-Output "Upload $platformArchiveName and every file in dist/tool-archives/ to GitHub release: $Version"
+if ($ToolAssetVersion -eq $Version) {
+  Write-Output "Upload $platformArchiveName and every file in dist/tool-archives/ to GitHub release: $Version"
+} else {
+  Write-Output "Upload $platformArchiveName to GitHub release: $Version"
+  Write-Output "Tool archive URLs point to existing GitHub release: $ToolAssetVersion"
+}
 Write-Output "Boards Manager URL: https://raw.githubusercontent.com/$Owner/$Repository/main/package_vehtronica_same_index.json"

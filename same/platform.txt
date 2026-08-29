@@ -20,7 +20,7 @@
 # https://arduino.github.io/arduino-cli/0.33/platform-specification/
 
 name=Vehtronica SAMD/E Boards
-version=1.0.0
+version=1.0.1
 
 # Compile variables
 # -----------------

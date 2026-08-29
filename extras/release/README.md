@@ -17,17 +17,19 @@ The release strategy is:
 Run from the repository root:
 
 ```powershell
-.\extras\release\create-board-manager-package.ps1 -Version 1.0.0
+.\extras\release\create-board-manager-package.ps1 -Version 1.0.1 -ToolAssetVersion 1.0.0 -SkipToolDownloads
 ```
 
 This creates:
 
 - `package_vehtronica_same_index.json`
-- `dist/VehtronicaSAME-same-1.0.0.zip`
-- mirrored tool archives under `dist/tool-archives/`
+- `dist/VehtronicaSAME-same-1.0.1.zip`
+- mirrored tool archives under `dist/tool-archives/` when tool downloads are not skipped
 
 The release assets are not stored in Git. They are generated into `dist/` and
-uploaded to the GitHub release.
+uploaded to the GitHub release. Patch releases that do not change tool versions
+can point `-ToolAssetVersion` at an earlier release to avoid re-uploading the
+large tool archives.
 
 ## Tool Versions
 
