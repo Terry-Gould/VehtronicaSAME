@@ -1,0 +1,313 @@
+{
+  "packages": [
+    {
+      "name": "VehtronicaSAME",
+      "maintainer": "Terry Gould",
+      "websiteURL": "https://github.com/Terry-Gould/VehtronicaSAME",
+      "email": "terry.gould.public@gmail.com",
+      "platforms": [
+        {
+          "name": "Vehtronica SAMD/E Boards",
+          "architecture": "same",
+          "version": "1.0.0",
+          "category": "Contributed",
+          "help": {
+            "online": "https://github.com/Terry-Gould/VehtronicaSAME"
+          },
+          "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/VehtronicaSAME-same-1.0.0.zip",
+          "archiveFileName": "VehtronicaSAME-same-1.0.0.zip",
+          "checksum": "SHA-256:d6c189c65c3709309bd93c2ddbd257d4f983eaad050bacf6acf2b36841f84df5",
+          "size": "1026771",
+          "boards": [
+            {
+              "name": "Vehtronica MicroCAN-FD"
+            }
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "VehtronicaSAME",
+              "name": "arm-none-eabi-gcc",
+              "version": "9-2019q4"
+            },
+            {
+              "packager": "VehtronicaSAME",
+              "name": "bossac",
+              "version": "1.8.0-48-gb176eee"
+            },
+            {
+              "packager": "VehtronicaSAME",
+              "name": "CMSIS",
+              "version": "5.4.0"
+            },
+            {
+              "packager": "VehtronicaSAME",
+              "name": "CMSIS-Atmel",
+              "version": "1.2.2"
+            },
+            {
+              "packager": "VehtronicaSAME",
+              "name": "openocd",
+              "version": "0.11.0-arduino2"
+            }
+          ]
+        }
+      ],
+      "tools": [
+        {
+          "name": "arm-none-eabi-gcc",
+          "version": "9-2019q4",
+          "systems": [
+            {
+              "host": "arm-linux-gnueabihf",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/gcc-arm-none-eabi-7-2019-q4-major-linuxarm.tar.bz2",
+              "archiveFileName": "gcc-arm-none-eabi-7-2019-q4-major-linuxarm.tar.bz2",
+              "checksum": "SHA-256:34180943d95f759c66444a40b032f7dd9159a562670fc334f049567de140c51b",
+              "size": "96613739"
+            },
+            {
+              "host": "aarch64-linux-gnu",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/gcc-arm-none-eabi-9-2019-q4-major-aarch64-linux.tar.bz2",
+              "archiveFileName": "gcc-arm-none-eabi-9-2019-q4-major-aarch64-linux.tar.bz2",
+              "checksum": "MD5:0dfa059aae18fcf7d842e30c525076a4",
+              "size": "128670769"
+            },
+            {
+              "host": "i686-mingw32",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/gcc-arm-none-eabi-9-2019-q4-major-win32.zip",
+              "archiveFileName": "gcc-arm-none-eabi-9-2019-q4-major-win32.zip",
+              "checksum": "MD5:9d60cbb0e358ab6a9d3c9e5dc3624dd2",
+              "size": "153520070"
+            },
+            {
+              "host": "x86_64-apple-darwin",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/gcc-arm-none-eabi-9-2019-q4-major-mac.tar.bz2",
+              "archiveFileName": "gcc-arm-none-eabi-9-2019-q4-major-mac.tar.bz2",
+              "checksum": "MD5:241b64f0578db2cf146034fc5bcee3d4",
+              "size": "116770520"
+            },
+            {
+              "host": "x86_64-pc-linux-gnu",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/gcc-arm-none-eabi-9-2019-q4-major-x86_64-linux.tar.bz2",
+              "archiveFileName": "gcc-arm-none-eabi-9-2019-q4-major-x86_64-linux.tar.bz2",
+              "checksum": "MD5:fe0029de4f4ec43cf7008944e34ff8cc",
+              "size": "116802378"
+            },
+            {
+              "host": "i686-pc-linux-gnu",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/gcc-arm-none-eabi-7-2018-q2-update-linux32.tar.bz2",
+              "archiveFileName": "gcc-arm-none-eabi-7-2018-q2-update-linux32.tar.bz2",
+              "checksum": "SHA-256:090a0bc2b1956bc49392dff924a6c30fa57c88130097b1972204d67a45ce3cf3",
+              "size": "97427309"
+            }
+          ]
+        },
+        {
+          "name": "bossac",
+          "version": "1.8.0-48-gb176eee",
+          "systems": [
+            {
+              "host": "i686-mingw32",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/bossac-1.8-48-gb176eee-i686-w64-mingw32.tar.gz",
+              "archiveFileName": "bossac-1.8-48-gb176eee-i686-w64-mingw32.tar.gz",
+              "checksum": "SHA-256:4523a6897f3dfd673fe821c5cfbac8d6a12782e7a36b312b9ee7d41deec2a10a",
+              "size": "91219"
+            },
+            {
+              "host": "x86_64-apple-darwin",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/bossac-1.8-48-gb176eee-i386-apple-darwin16.1.0.tar.gz",
+              "archiveFileName": "bossac-1.8-48-gb176eee-i386-apple-darwin16.1.0.tar.gz",
+              "checksum": "SHA-256:581ecc16021de36638ae14e9e064ffb4a1d532a11502f4252da8bcdf5ce1d649",
+              "size": "39150"
+            },
+            {
+              "host": "x86_64-pc-linux-gnu",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/bossac-1.8-48-gb176eee-x86_64-linux-gnu.tar.gz",
+              "archiveFileName": "bossac-1.8-48-gb176eee-x86_64-linux-gnu.tar.gz",
+              "checksum": "SHA-256:1347eec67f5b90b785abdf6c8a8aa59129d0c016de7ff9b5ac1690378eacca3c",
+              "size": "37798"
+            },
+            {
+              "host": "i686-pc-linux-gnu",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/bossac-1.8-48-gb176eee-i486-linux-gnu.tar.gz",
+              "archiveFileName": "bossac-1.8-48-gb176eee-i486-linux-gnu.tar.gz",
+              "checksum": "SHA-256:4c7492f876b8269aa9d8bcaad3aeda31acf1a0292383093b6d9f5f1d23fdafc3",
+              "size": "37374"
+            },
+            {
+              "host": "arm-linux-gnueabihf",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/bossac-1.8-48-gb176eee-arm-linux-gnueabihf.tar.gz",
+              "archiveFileName": "bossac-1.8-48-gb176eee-arm-linux-gnueabihf.tar.gz",
+              "checksum": "SHA-256:2001e4a592f3aefd22f213b1ddd6f5d8d5e74bd04080cf1b97c24cbaa81b10ed",
+              "size": "34825"
+            },
+            {
+              "host": "aarch64-linux-gnu",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/bossac-1.9.1-arduino2-linuxaarch64.tar.gz",
+              "archiveFileName": "bossac-1.9.1-arduino2-linuxaarch64.tar.gz",
+              "checksum": "SHA-256:c167fa0ea223966f4d21f5592da3888bcbfbae385be6c5c4e41f8abff35f5cb1",
+              "size": "442853"
+            }
+          ]
+        },
+        {
+          "name": "CMSIS",
+          "version": "5.4.0",
+          "systems": [
+            {
+              "host": "i686-mingw32",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/CMSIS_5-5.4.0-adafruit.tar.gz",
+              "archiveFileName": "CMSIS_5-5.4.0-adafruit.tar.gz",
+              "checksum": "SHA-256:93d09907ceb23a520ef65e6b5014d2e866efa6b7f5fe5d8828b29bbc54dec697",
+              "size": "153772853"
+            },
+            {
+              "host": "x86_64-apple-darwin",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/CMSIS_5-5.4.0-adafruit.tar.gz",
+              "archiveFileName": "CMSIS_5-5.4.0-adafruit.tar.gz",
+              "checksum": "SHA-256:93d09907ceb23a520ef65e6b5014d2e866efa6b7f5fe5d8828b29bbc54dec697",
+              "size": "153772853"
+            },
+            {
+              "host": "x86_64-pc-linux-gnu",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/CMSIS_5-5.4.0-adafruit.tar.gz",
+              "archiveFileName": "CMSIS_5-5.4.0-adafruit.tar.gz",
+              "checksum": "SHA-256:93d09907ceb23a520ef65e6b5014d2e866efa6b7f5fe5d8828b29bbc54dec697",
+              "size": "153772853"
+            },
+            {
+              "host": "i686-pc-linux-gnu",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/CMSIS_5-5.4.0-adafruit.tar.gz",
+              "archiveFileName": "CMSIS_5-5.4.0-adafruit.tar.gz",
+              "checksum": "SHA-256:93d09907ceb23a520ef65e6b5014d2e866efa6b7f5fe5d8828b29bbc54dec697",
+              "size": "153772853"
+            },
+            {
+              "host": "arm-linux-gnueabihf",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/CMSIS_5-5.4.0-adafruit.tar.gz",
+              "archiveFileName": "CMSIS_5-5.4.0-adafruit.tar.gz",
+              "checksum": "SHA-256:93d09907ceb23a520ef65e6b5014d2e866efa6b7f5fe5d8828b29bbc54dec697",
+              "size": "153772853"
+            },
+            {
+              "host": "aarch64-linux-gnu",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/CMSIS_5-5.4.0-adafruit.tar.gz",
+              "archiveFileName": "CMSIS_5-5.4.0-adafruit.tar.gz",
+              "checksum": "SHA-256:93d09907ceb23a520ef65e6b5014d2e866efa6b7f5fe5d8828b29bbc54dec697",
+              "size": "153772853"
+            },
+            {
+              "host": "all",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/CMSIS_5-5.4.0-adafruit.tar.gz",
+              "archiveFileName": "CMSIS_5-5.4.0-adafruit.tar.gz",
+              "checksum": "SHA-256:93d09907ceb23a520ef65e6b5014d2e866efa6b7f5fe5d8828b29bbc54dec697",
+              "size": "153772853"
+            }
+          ]
+        },
+        {
+          "name": "CMSIS-Atmel",
+          "version": "1.2.2",
+          "systems": [
+            {
+              "host": "i686-mingw32",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/CMSIS-Atmel-1.2.2.tar.bz2",
+              "archiveFileName": "CMSIS-Atmel-1.2.2.tar.bz2",
+              "checksum": "SHA-256:ad06a1d864b79981728882a0a1272ff4dc0b29ae4e056f3f22f3ed449a6c65b8",
+              "size": "2511228"
+            },
+            {
+              "host": "x86_64-apple-darwin",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/CMSIS-Atmel-1.2.2.tar.bz2",
+              "archiveFileName": "CMSIS-Atmel-1.2.2.tar.bz2",
+              "checksum": "SHA-256:ad06a1d864b79981728882a0a1272ff4dc0b29ae4e056f3f22f3ed449a6c65b8",
+              "size": "2511228"
+            },
+            {
+              "host": "x86_64-pc-linux-gnu",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/CMSIS-Atmel-1.2.2.tar.bz2",
+              "archiveFileName": "CMSIS-Atmel-1.2.2.tar.bz2",
+              "checksum": "SHA-256:ad06a1d864b79981728882a0a1272ff4dc0b29ae4e056f3f22f3ed449a6c65b8",
+              "size": "2511228"
+            },
+            {
+              "host": "i686-pc-linux-gnu",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/CMSIS-Atmel-1.2.2.tar.bz2",
+              "archiveFileName": "CMSIS-Atmel-1.2.2.tar.bz2",
+              "checksum": "SHA-256:ad06a1d864b79981728882a0a1272ff4dc0b29ae4e056f3f22f3ed449a6c65b8",
+              "size": "2511228"
+            },
+            {
+              "host": "arm-linux-gnueabihf",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/CMSIS-Atmel-1.2.2.tar.bz2",
+              "archiveFileName": "CMSIS-Atmel-1.2.2.tar.bz2",
+              "checksum": "SHA-256:ad06a1d864b79981728882a0a1272ff4dc0b29ae4e056f3f22f3ed449a6c65b8",
+              "size": "2511228"
+            },
+            {
+              "host": "aarch64-linux-gnu",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/CMSIS-Atmel-1.2.2.tar.bz2",
+              "archiveFileName": "CMSIS-Atmel-1.2.2.tar.bz2",
+              "checksum": "SHA-256:ad06a1d864b79981728882a0a1272ff4dc0b29ae4e056f3f22f3ed449a6c65b8",
+              "size": "2511228"
+            },
+            {
+              "host": "all",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/CMSIS-Atmel-1.2.2.tar.bz2",
+              "archiveFileName": "CMSIS-Atmel-1.2.2.tar.bz2",
+              "checksum": "SHA-256:ad06a1d864b79981728882a0a1272ff4dc0b29ae4e056f3f22f3ed449a6c65b8",
+              "size": "2511228"
+            }
+          ]
+        },
+        {
+          "name": "openocd",
+          "version": "0.11.0-arduino2",
+          "systems": [
+            {
+              "host": "aarch64-linux-gnu",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/openocd-0.11.0-arduino2-static-aarch64-linux-gnu.tar.bz2",
+              "archiveFileName": "openocd-0.11.0-arduino2-static-aarch64-linux-gnu.tar.bz2",
+              "checksum": "SHA-256:a1aa7f1435a61eafb72ee90722f2496d6a34a7a0f085d0315c2613e4a548b824",
+              "size": "1902818"
+            },
+            {
+              "host": "arm-linux-gnueabihf",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/openocd-0.11.0-arduino2-static-arm-linux-gnueabihf.tar.bz2",
+              "archiveFileName": "openocd-0.11.0-arduino2-static-arm-linux-gnueabihf.tar.bz2",
+              "checksum": "SHA-256:57041130160be086e69387cceb4616eefc9819a0ef75de1f7c11aea57fb92699",
+              "size": "1986716"
+            },
+            {
+              "host": "i386-apple-darwin11",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/openocd-0.11.0-arduino2-static-x86_64-apple-darwin13.tar.bz2",
+              "archiveFileName": "openocd-0.11.0-arduino2-static-x86_64-apple-darwin13.tar.bz2",
+              "checksum": "SHA-256:280e7234eba84e830e92d791ebc685286f71d2bc1d3347f93605ef170d54fef4",
+              "size": "1893150"
+            },
+            {
+              "host": "i686-linux-gnu",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/openocd-0.11.0-arduino2-static-i686-ubuntu12.04-linux-gnu.tar.bz2",
+              "archiveFileName": "openocd-0.11.0-arduino2-static-i686-ubuntu12.04-linux-gnu.tar.bz2",
+              "checksum": "SHA-256:6f4a8b77c8076aa18afb8438472526dff8c0d161a3ca68d0326163b59fcab663",
+              "size": "1971364"
+            },
+            {
+              "host": "i686-mingw32",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/openocd-0.11.0-arduino2-static-i686-w64-mingw32.zip",
+              "archiveFileName": "openocd-0.11.0-arduino2-static-i686-w64-mingw32.zip",
+              "checksum": "SHA-256:631010980f12b1e750c4c67ce012b31c5953caabf4d30607d806e3d2b717d4b8",
+              "size": "2460087"
+            },
+            {
+              "host": "x86_64-linux-gnu",
+              "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.0/openocd-0.11.0-arduino2-static-x86_64-ubuntu12.04-linux-gnu.tar.bz2",
+              "archiveFileName": "openocd-0.11.0-arduino2-static-x86_64-ubuntu12.04-linux-gnu.tar.bz2",
+              "checksum": "SHA-256:4d19b6e3906de1434ec86841e0e3138235714c655d45f037c0fabfa5e5c0681b",
+              "size": "2052080"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

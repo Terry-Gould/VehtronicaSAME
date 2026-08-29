@@ -19,3 +19,6 @@ build/
 Thumbs.db
 *.swp
 *.tmp
+
+# Local release packaging output
+dist/
