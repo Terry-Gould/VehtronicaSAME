@@ -9,15 +9,15 @@
         {
           "name": "Vehtronica SAMD/E Boards",
           "architecture": "same",
-          "version": "1.0.2",
+          "version": "1.0.3",
           "category": "Contributed",
           "help": {
             "online": "https://github.com/Terry-Gould/VehtronicaSAME"
           },
-          "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.2/VehtronicaSAME-same-1.0.2.zip",
-          "archiveFileName": "VehtronicaSAME-same-1.0.2.zip",
-          "checksum": "SHA-256:a89150486047f0c83d57b51a6998de6daa819f60bc0ebe4a18d3d030be15dc27",
-          "size": "1027053",
+          "url": "https://github.com/Terry-Gould/VehtronicaSAME/releases/download/1.0.3/VehtronicaSAME-same-1.0.3.zip",
+          "archiveFileName": "VehtronicaSAME-same-1.0.3.zip",
+          "checksum": "SHA-256:6b9bc1633527080c7e0b67551002922c8a9dc4ddcec903ef2e2d1e3c912434c8",
+          "size": "1038041",
           "boards": [
             {
               "name": "Vehtronica MicroCAN-FD"

@@ -100,9 +100,9 @@ void loop() {
     frame.data[6] = 0x77;
     frame.data[7] = 0x88;
 
-    const uint32_t sendStatus = can0.tryToSendReturnStatusFD(frame);
+    const uint32_t sendStatus = can0.sendFrame(frame);
 
-    // This just prints to tell us if the .tryToSendReturnStatusFD was ok or if there was an error.
+    // This just prints to tell us if sendFrame was ok or if there was an error.
     if (sendStatus == 0) {
       sentCount += 1;
       Serial.print("Sent ");

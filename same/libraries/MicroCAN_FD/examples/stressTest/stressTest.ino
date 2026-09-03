@@ -138,7 +138,6 @@ static void configureCANSettings(ACANFD_SAME_Settings &settings) {
 static void initFramePool(CANFDMessage *pool, const uint8_t marker, const uint16_t baseId) {
   for (uint8_t frameIndex = 0; frameIndex < FRAME_POOL_SIZE; frameIndex++) {
     CANFDMessage &frame = pool[frameIndex];
-    frame.idx = TX_INDEX_FIFO;
     frame.ext = false;
     frame.id = baseId + frameIndex;
     frame.type = CANFDMessage::CANFD_WITH_BIT_RATE_SWITCH;
@@ -195,7 +194,7 @@ static void pumpCanChannel(ACANFD_SAME &can,
       return;
     }
     CANFDMessage frame = nextFrame(pool, poolIndex, sequence);
-    const uint32_t sendStatus = can.tryToSendReturnStatusFD(frame);
+    const uint32_t sendStatus = can.sendFrame(frame);
     if (sendStatus == 0) {
       pending += 1;
       sent += 1;
